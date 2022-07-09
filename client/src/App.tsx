@@ -1,16 +1,15 @@
 import React from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import User from './components/ui/User';
 
 function App() {
-  const [data, setData] = React.useState<null | string>(null);
-  
-  React.useEffect(() => {
-    fetch("/api").then(res => res.json()).then(data => setData(data[0].firstName + " " + data[0].lastName))
-  }, [])
-
   return (
     <div className="App">
-      <p>{!data ? "Loading..." : data}</p>
+      <section style={{backgroundColor: 'lightgrey', padding: '20px'}}>
+        <h3>Users:</h3>
+      </section>
+      <User />
     </div>
   );
 }
