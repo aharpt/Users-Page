@@ -6,8 +6,8 @@ import User from './components/ui/User';
 function App() {
   return (
     <div className="App">
-      <section style={{backgroundColor: 'lightgrey', padding: '20px'}}>
-        <h3>Users:</h3>
+      <section style={{padding: '20px', marginRight: '85%'}}>
+        <h3>User List:</h3>
       </section>
       <User />
     </div>
